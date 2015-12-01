@@ -13,6 +13,7 @@
     <!-- Latest compiled and minified CSS -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="css/styles.css">
 
@@ -27,6 +28,25 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script type="text/javascript">
+    $("#nav ul li a[href^='#']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+         }, 300, function(){
+   
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = this.hash;
+         });
+
+    });
+
+</script>
   </head>
   <body>
  <body>
@@ -39,12 +59,13 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="#">Pavel Georgiev</a>
+<!-- <a class="navbar-brand" href="#">Pavel Georgiev</a> -->
 <div class="navbar-collapse collapse"> 
 <ul class="nav navbar-nav navbar-right"> 
-     <li><a href="#">About</a></li>
-     <li><a href="#">Resume</a></li> 
-     <li><a href="#">Contact</a></li> 
+     <li><a href="#about">About</a></li>
+     <li><a href="#contact">Contact</a></li> 
+     <li><a href = "https://drive.google.com/file/d/0BziL3OnDZhW_Q0haV3RWNG40ZDg/view?usp=sharing"  target="_blank">Resume</a></li> 
+     
 </ul>
 </div>
 </nav>
@@ -83,28 +104,80 @@
     <div class = "row">
       <h2 id = "about">About</h2>
     
-    <div class="col-md-11 col-sm-12 col-xs-12 col-md-offset-1">
-           
-           <p><img src = "resources/img/profile_black.jpg" class="col-md-3 img-responsive pull-left" alt="Picture of highly intellectual individual" id="profile_photo" />Bacon ipsum dolor sit amet short loin jerky salami sausage, hamburger t-bone doner filet mignon sirloin beef. Tail short ribs jerky leberkas prosciutto pastrami fatback jowl turkey t-bone bacon. Hamburger tail tri-tip, ribeye ham hock leberkas meatball pig short ribs jerky meatloaf. Flank shank bacon, fatback boudin ham tongue beef ribs pig brisket pancetta frankfurter. Jerky pig biltong, chicken hamburger swine corned beef beef ribs beef jowl. Kevin cow turducken, pancetta fatback swine pig boudin ball tip kielbasa venison. Pig salami capicola chuck pancetta pork.</p>
-         
-          <div class = "container">
-           <a href="#" class="button">
-            <span>Resume</span>
-          </a>
-          </div>
+    <div class="col-md-4 col-sm-5 col-xs-5 col-md-offset-1">
+    <img src = "resources/img/profile_black.jpg" class="col-md-3 img-responsive pull-left" alt="Picture of highly intellectual individual" id="profile_photo" />
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-7col-md-offset-1">
+            <h3 id="about">Who am I?</h3>
+           <p>Hi, I am Pavel.I am first year at the University of Edinburgh studying Computer Science. I really enjoy playing around with code and observing what I can create with it. As a result, I probably know one too many programming languages. Unfortunatelly, I have indepth knowledge in only few of them and this is something I am currently trying to correct! </p>
+           <hr>
+
+           <h3 id = "about">Fun facts</h3>
+           <p>I love coffee. I am also really into fitness and nutrition.My favourite colour is <span style="color:#730099">purple</span>.Used to play a fair amount of video games before I came to university.</p>
+
 
     </div>
     </div> <!--row-->
     </div><!--col offset-->
   </div>
-
     
-    
+    <div class = "container">
+        <div class = "row">
+            <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+              <section class="flat">
+                <a href = "https://drive.google.com/file/d/0BziL3OnDZhW_Q0haV3RWNG40ZDg/view?usp=sharing"  target="_blank" role="button"><button>Resume</button></a>
+              </section>
+            </div>
+        </div>
+       </div>
 
+
+       <div class = "container-fluid" id="contact">
+        <div class = "row">
+          <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+            <h2 id="about">Contact</h2>
+          <p>Feel free to reach me on any of the following and drop a friendly hello:</p>
+
+          <a href = "https://www.facebook.com/pavel.r.georgiev" target="_blank"> 
+          <i class="fa fa-facebook-square fa-3x"></i>
+          </a>
+
+          <a href="https://uk.linkedin.com/in/pavelrgeorgiev" target="_blank">
+          <i class="fa fa-linkedin-square fa-3x"></i>
+          </a>
+        
+          <a href = "https://github.com/Codingwizardirl" target="_blank">
+          <i class="fa fa-github-square fa-3x"></i>
+          </a>
+      
+          <a href = "mailto:pavel.r.georgiev@hotmail.com" target="_blank">
+          <i class="fa fa-envelope fa-3x"></i>
+          </a>
+          
+
+         </div>
+       </div>
+     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>

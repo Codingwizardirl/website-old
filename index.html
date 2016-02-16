@@ -9,7 +9,7 @@
     <meta property="og:site_name" content="Pavel Georgiev"/>
     <meta property="og:title" content="Pavel Georgiev"/>
     <meta property="og:description" content="Personal website of Pavel R. Georgiev - Computer Science student and maker of things."/>
-    <meta property="og:image" content="resources/img/profile.jpg">
+    <meta property="og:image" content="./resources/img/profile.jpg">
     <meta property="og:url" content="https://pavelgeorgiev.me/">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -109,17 +109,17 @@
 <div class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
     <div class = "row">
-      <h2 id = "about">About</h2>
+      <h2 id = "title">About</h2>
     
     <div class="col-md-4 col-sm-5 col-xs-5 col-md-offset-1">
     <img src = "resources/img/profile.jpg" class="col-md-3 img-responsive pull-left" alt="Picture of highly intellectual individual" id="profile_photo" />
     </div>
     <div class="col-md-7 col-sm-7 col-xs-7col-md-offset-1">
-            <h3 id="about">Who am I?</h3>
+            <h3 id="title">Who am I?</h3>
            <p>Hi, I am Pavel.I am first year at the University of Edinburgh studying Computer Science. I really enjoy playing around with code and observing the aftermath of that. As a result, I probably know one too many programming languages. I am eager to keep on learning and although I have in-depth knowledge in only few of them, I am in the process of correcting that!</p>
            <hr>
 
-           <h3 id = "about">Fast facts</h3>
+           <h3 id = "title">Fast facts</h3>
            <p>I love coffee. I am also really into fitness and nutrition.My favourite colour is <span style="color:#730099">purple</span>.Used to play a fair amount of video games before I came to university.</p>
 
 
@@ -145,8 +145,9 @@
 <!-- Social media section -->
        <div class = "container-fluid" id="contact">
         <div class = "row">
-          <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-            <h2 id="about">Contact</h2>
+        <h2 id="title">Contact</h2>
+          <div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-1">
+            
           <p>Feel free to reach me on any of the following and drop a friendly hello:</p>
 
           <a href = "https://www.facebook.com/pavel.r.georgiev" target="_blank"> 
@@ -164,13 +165,53 @@
           <a href = "mailto:hello@pavelgeorgiev.me" target="_blank">
           <i class="fa fa-envelope fa-3x"></i>
           </a>
-          
-
          </div>
-       </div>
+
+         <!-- Contact form under construction - can't use PHP on Github Pages -->
+         
+        <!--  <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+            
+        
+            <form class="form-horizontal" role="form" method="post" action="index.php">
+        
+            <div class="form-group">
+                <label for="name" class="col-sm-1 control-label">Name</label>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+           <input type="text" class="form-control" id="name" name="name" placeholder="First &amp; Last Name" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-1 control-label">Email</label>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+           <input type="email" class="form-control" id="email" name="email" placeholder="me@mydomain.com" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message" class="col-sm-1 control-label">Message</label>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+           <textarea class="form-control" rows="4" name="message"></textarea>
+                </div>
+            </div>
+          
+            <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+           <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" style="margin-left: 60%;">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1">
+               
+                </div>
+            </div>
+            </div>
+        </form>
+        
+               </div> -->
+
+
      </div>
      <!-- end of social media section -->
-
+     
     
   </body>
 </html>

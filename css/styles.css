@@ -4,7 +4,6 @@ html, body {
 }
 
 body{
-	padding-top: 50px;
 	color:#000;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
   Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -46,7 +45,7 @@ body{
 /* tablets */
 @media (max-width: 991px) and (min-width: 768px) {
     .slider-size {
-        height: auto;
+        height: 450px;
     }
     .slider-size > img {
         width: 100%;
@@ -54,19 +53,37 @@ body{
 }
 
 /* laptops */
+
 @media (max-width: 1023px) and (min-width: 992px) {
     .slider-size {
-         height: 600px;
+         height: 590px;
+    }
+    .slider-size > img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* desktops */
+@media (max-width: 1220px) and (min-width: 1024px)  {
+    .slider-size {
+        height: 600px;
     }
     .slider-size > img {
         width: 100%;
     }
 }
-
-/* desktops */
-@media (min-width: 1024px) {
+@media (max-width: 1379px) and (min-width: 1221px)  {
     .slider-size {
-        height: 820px;
+        height: 730px;
+    }
+    .slider-size > img {
+        width: 100%;
+    }
+}
+@media (min-width: 1380px) {
+    .slider-size {
+        height: 800px;
     }
     .slider-size > img {
         width: 100%;

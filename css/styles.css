@@ -82,12 +82,13 @@ body{
 }
 @media (min-width: 1380px) {
     .slider-size {
-        height: 800px;
+        height: 100vh;
     }
     .slider-size > img {
         width: 100%;
     }
 }
+
 
 /* End of code for image carousel */
 .absolute-wrapper{

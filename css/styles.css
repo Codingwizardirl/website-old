@@ -127,6 +127,7 @@ body{
 	color:#fff;
 }
 
+#submit
 /*Social media buttons*/
 .fa {
 	margin-right:3px;
@@ -168,7 +169,7 @@ body{
 
 /* Button CSS */
 /*reseting button setting because browser differences*/
-button {
+button{
   display:inline-block;
   margin-top: 2em;
   padding: 5px 15px;
@@ -182,27 +183,39 @@ button {
   margin-bottom: 1em;
 }
 
-button:focus {
+button:focus,button[type="submit"]:focus {
   outline: none
 }
 
-section.flat button {
+section.flat button{
   color: #cc3123;
   background: rgba(0,0,0,0);
   border: solid 1.5px #cc3123;
 }
 
+button[type="submit"]{
+  color: #fff;
+  background: rgba(0,0,0,0);
+  border: solid 1.5px #fff;
+}
+
 section.flat button:hover,
-section.flat button.hover {
+section.flat button.hover,
+button[type="submit"]:hover,
+button[type="submit"].hover {
   background: #cc3123 ;
   border:none;
   color:#fff;
 }
 
 section.flat button:active,
-section.flat button.active {
+section.flat button.active.
+button[type="submit"]:hover,
+button[type="submit"].hover{
   background: #cc3123 ;
   border:none;
   color:#fff;
   text-shadow: -0.5px 0.5px #193047;
 }
+
+#success_message{ display: none;}

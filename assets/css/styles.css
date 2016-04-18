@@ -127,7 +127,6 @@ body{
 	color:#fff;
 }
 
-#submit
 /*Social media buttons*/
 .fa {
 	margin-right:3px;
@@ -180,7 +179,7 @@ button{
   box-shadow: none;
   border-radius: 0;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 button:focus,button[type="submit"]:focus {
@@ -199,10 +198,17 @@ button[type="submit"]{
   border: solid 1.5px #fff;
 }
 
+button[type="submit"]:hover,
+button[type="submit"].hover{
+  background: #cc3123 ;
+  border:none;
+  color:#fff;
+  border:solid 1.5px #cc3123;
+}
+
 section.flat button:hover,
 section.flat button.hover,
-button[type="submit"]:hover,
-button[type="submit"].hover {
+ {
   background: #cc3123 ;
   border:none;
   color:#fff;
